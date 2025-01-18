@@ -11,7 +11,7 @@ const Card = ({ imageSrc, title, href = "/signup" }: CardProps) => (
     <img
       src={imageSrc}
       alt={title.toLowerCase()}
-      className="rounded-md w-[15rem]"
+      className="rounded-md max-w-[15rem]"
       onError={(e) => (e.currentTarget.src = "/images/fallback.png")}
     />
     <div className="flex flex-col">
