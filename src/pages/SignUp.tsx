@@ -28,9 +28,9 @@ const SignUp = () => {
         <img
           src="/images/login.png"
           alt="logo"
-          className="order-1 md:order-2 w-full md:w-2/5 object-cover"
+          className="order-1 md:order-2 w-1/2 md:w-2/5 object-cover"
         />
-        <div className="flex flex-col justify-center items-center order-2 md:order-1 bg-white p-8 w-full md:w-1/2">
+        <div className="flex flex-col justify-center items-center order-2 md:order-1 bg-white md:p-8 w-full md:w-1/2">
           <h1 className="bg-clip-text bg-gradient-to-tr from-gold to-gold-light drop-shadow-lg mb-4 p-4 font-bold text-4xl text-center text-transparent tracking-wide">
             Sign Up
           </h1>
