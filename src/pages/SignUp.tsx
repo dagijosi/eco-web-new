@@ -1,26 +1,82 @@
 import { useState } from "react";
 import Form from "../components/Form";
+import {
+  FaUser,
+  FaEnvelope,
+  FaLock,
+  FaIdCard,
+  FaPhone,
+  FaCar,
+  FaCalendar,
+} from "react-icons/fa";
+
+const iconStyle = "text-gold";
+
+const commonData = [
+  {
+    label: "First Name",
+    placeholder: "First Name",
+    type: "text",
+    icon: <FaUser className={iconStyle} />,
+  },
+  {
+    label: "Last Name",
+    placeholder: "Last Name",
+    type: "text",
+    icon: <FaUser className={iconStyle} />,
+  },
+  {
+    label: "Email Address",
+    placeholder: "Email Address",
+    type: "email",
+    icon: <FaEnvelope className={iconStyle} />,
+  },
+  {
+    label: "Password",
+    placeholder: "Password",
+    type: "password",
+    icon: <FaLock className={iconStyle} />,
+  },
+  {
+    label: "Confirm Password",
+    placeholder: "Confirm Password",
+    type: "password",
+    icon: <FaLock className={iconStyle} />,
+  },
+];
+
+const renterData = [
+  {
+    label: "Driver's License Number",
+    placeholder: "Driver's License Number",
+    type: "text",
+    icon: <FaIdCard className={iconStyle} />,
+  },
+  {
+    label: "Phone Number",
+    placeholder: "Phone Number",
+    type: "tel",
+    icon: <FaPhone className={iconStyle} />,
+  },
+];
+
+const lessorData = [
+  {
+    label: "Car Model",
+    placeholder: "Car Model",
+    type: "text",
+    icon: <FaCar className={iconStyle} />,
+  },
+  {
+    label: "Car Year",
+    placeholder: "Car Year",
+    type: "number",
+    icon: <FaCalendar className={iconStyle} />,
+  },
+];
 
 const SignUp = () => {
   const [userType, setUserType] = useState<"renter" | "lessor">("renter");
-
-  const commonData = [
-    { label: "First Name", placeholder: "First Name", type: "text" },
-    { label: "Last Name", placeholder: "Last Name", type: "text" },
-    { label: "Email Address", placeholder: "Email Address", type: "email" },
-    { label: "Password", placeholder: "Password", type: "password" },
-    { label: "Confirm Password", placeholder: "Confirm Password", type: "password" },
-  ];
-
-  const renterData = [
-    { label: "Driver's License Number", placeholder: "Driver's License Number", type: "text" },
-    { label: "Phone Number", placeholder: "Phone Number", type: "tel" },
-  ];
-
-  const lessorData = [
-    { label: "Car Model", placeholder: "Car Model", type: "text" },
-    { label: "Car Year", placeholder: "Car Year", type: "number" },
-  ];
 
   return (
     <div className="flex justify-center items-center min-h-[calc(100vh-100px)]">
@@ -38,7 +94,9 @@ const SignUp = () => {
             type="signup"
             userType={userType}
             setUserType={setUserType}
-            data={commonData.concat(userType === "renter" ? renterData : lessorData)}
+            data={commonData.concat(
+              userType === "renter" ? renterData : lessorData
+            )}
           />
         </div>
       </div>

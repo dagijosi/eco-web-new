@@ -1,6 +1,9 @@
 import Form from "../components/Form";
+import { FaEnvelope, FaLock } from "react-icons/fa";
 
 const Login = () => {
+  const iconStyle = "text-gold";
+
   return (
     <div className="flex justify-center items-center p-4 min-h-[calc(100vh-100px)]">
       <div className="flex md:flex-row flex-col justify-center items-center shadow-lg px-4 py-10 rounded-lg max-w-4xl overflow-hidden">
@@ -16,8 +19,18 @@ const Login = () => {
           <Form
             type="login"
             data={[
-              { label: "Email Address", placeholder: "Email Address", type: "email" },
-              { label: "Password", placeholder: "Password", type: "password" },
+              {
+                label: "Email Address",
+                placeholder: "Email Address",
+                type: "email",
+                icon: <FaEnvelope className={iconStyle} />,
+              },
+              {
+                label: "Password",
+                placeholder: "Password",
+                type: "password",
+                icon: <FaLock className={iconStyle} />,
+              },
             ]}
           />
         </div>

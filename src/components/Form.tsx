@@ -1,9 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import CustomInput from "./FormComponents/CustomInput";
+import RoleSelection from "./FormComponents/RoleSelection";
+import SubmitButton from "./FormComponents/SubmitButton";
+import RememberPassword from "./FormComponents/RememberPassword";
+import ForgotPasswordLink from "./FormComponents/ForgotPasswordLink";
 
 type dataProps = {
   label?: string;
   placeholder?: string;
   type?: string;
+  icon?: React.ReactNode;
 };
 
 interface FormProps {
@@ -14,56 +21,21 @@ interface FormProps {
 }
 
 const Form: React.FC<FormProps> = ({ data, type, userType, setUserType }) => {
-  const CustomInput: React.FC<dataProps> = ({ label, placeholder, type }) => {
-    return (
-      <div className="mb-4">
-        <label className="block mb-2 font-bold text-gray-700 text-sm">
-          {label}
-        </label>
-        <input
-          type={type}
-          placeholder={placeholder}
-          className="shadow focus:shadow-outline px-3 py-2 border rounded w-full text-gray-700 leading-tight appearance-none focus:outline-none"
-        />
-      </div>
-    );
+  const navigate = useNavigate();
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    if (type === "login") {
+      navigate("/");
+    } else if (type === "signup") {
+      navigate("/login");
+    }
   };
 
   return (
-    <form className="w-full max-w-lg">
+    <form className="w-full max-w-lg" onSubmit={handleSubmit}>
       {type === "signup" && setUserType && (
-        <div className="mb-4 w-full">
-          <label className="flex items-center mb-2 font-bold text-gray-700 text-sm">
-            <span className="mr-2">🚗</span> Choose your role:
-          </label>
-
-          <div className="flex space-x-2">
-            <button
-              type="button"
-              aria-pressed={userType === "renter"}
-              onClick={() => setUserType("renter")}
-              className={`px-5 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-light focus:ring-offset-2 w-full transition-colors duration-200 ${
-                userType === "renter"
-                  ? "bg-gold-light text-white shadow-md"
-                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-              }`}
-            >
-              Car Renter
-            </button>
-            <button
-              type="button"
-              aria-pressed={userType === "lessor"}
-              onClick={() => setUserType("lessor")}
-              className={`px-5 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-light focus:ring-offset-2 w-full transition-colors duration-200 ${
-                userType === "lessor"
-                  ? "bg-gold-light text-white shadow-md"
-                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-              }`}
-            >
-              Car Lessor
-            </button>
-          </div>
-        </div>
+        <RoleSelection userType={userType} setUserType={setUserType} />
       )}
       <div
         className={`grid ${
@@ -76,33 +48,13 @@ const Form: React.FC<FormProps> = ({ data, type, userType, setUserType }) => {
             label={value?.label}
             placeholder={value?.placeholder}
             type={value?.type}
+            icon={value?.icon}
           />
         ))}
       </div>
-      {type === "login" && (
-        <div className="mb-4">
-          <label className="block mb-2 font-bold text-gray-700 text-sm">
-            <input type="checkbox" className="mr-2 leading-tight" />
-            Remember Password
-          </label>
-        </div>
-      )}
-      <button
-        type="submit"
-        className="bg-gradient-to-r from-gold-light hover:from-gold to-gold hover:to-gold-dark shadow-md hover:shadow-lg px-5 py-3 rounded-lg focus:ring-2 focus:ring-gold focus:ring-offset-2 w-full font-semibold text-white transition-all duration-300 ease-in-out focus:outline-none"
-      >
-        {type === "login" ? "Login" : "Sign Up"}
-      </button>
-      {type === "login" && (
-        <div className="mb-4">
-          <a
-            href="/password"
-            className="text-blue-500 text-sm hover:text-blue-800"
-          >
-            Forgot Password?
-          </a>
-        </div>
-      )}
+      {type === "login" && <RememberPassword />}
+      <SubmitButton type={type} />
+      {type === "login" && <ForgotPasswordLink />}
     </form>
   );
 };

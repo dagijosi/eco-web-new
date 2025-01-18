@@ -53,13 +53,13 @@ const Header: React.FC = () => {
 
       {/* Profile and Login Buttons */}
       <div
-        className={`flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-4 mt-4 md:mt-0 ${
+        className={`flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 mt-4 md:mt-0 ${
           isMenuOpen ? "flex" : "hidden"
         } md:flex transition-all duration-300`}
       >
         <a
           href={"/signup"}
-          className="text-base hover:text-gold transition-colors duration-300"
+          className="border-gold-light hover:border-gold px-4 py-2 border rounded-md text-base hover:text-gold transition-colors duration-300"
         >
           Sign Up
         </a>
