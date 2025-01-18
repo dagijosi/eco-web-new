@@ -51,7 +51,7 @@ const ProductList = () => {
 
   return (
     <div className="flex justify-center items-center">
-      <div className="gap-4 grid grid-cols-2 md:grid-cols-6 p-6">
+      <div className="gap-4 grid grid-cols-2 md:grid-cols-6 p-2 md:p-6">
         {filteredProducts.map((product) => (
           <div key={product.id}>
             <ProductCard product={product} />
