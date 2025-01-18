@@ -9,7 +9,7 @@ const Home = () => {
       <div className="flex justify-center items-center">
         <CardList />
       </div>
-      <div className="mt-6">
+      <div className="space-y-5 mt-8">
         <h1 className="font-semibold text-2xl text-marigold-600 underline underline-offset-8">Browse Our Selection of Cars</h1>
         <Filter />
       </div>

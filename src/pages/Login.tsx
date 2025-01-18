@@ -2,7 +2,7 @@ import Form from "../components/Form";
 import { FaEnvelope, FaLock } from "react-icons/fa";
 
 const Login = () => {
-  const iconStyle = "text-gold/70";
+  const iconStyle = "text-marigold-400";
 
   return (
     <div className="flex justify-center items-center p-4 min-h-[calc(100vh-100px)]">
@@ -13,7 +13,7 @@ const Login = () => {
           className="w-1/2 md:w-2/5 object-cover"
         />
         <div className="flex flex-col justify-center items-center bg-white p-8 w-full md:w-1/2">
-          <h1 className="bg-clip-text bg-gradient-to-tr from-gold to-gold-light drop-shadow-lg mb-4 p-4 font-bold text-4xl text-center text-transparent tracking-wide">
+          <h1 className="bg-clip-text bg-gradient-to-tr from-marigold-500 to-marigold-400 drop-shadow-lg mb-4 p-4 font-bold text-4xl text-center text-transparent tracking-wide">
             Login
           </h1>
           <Form

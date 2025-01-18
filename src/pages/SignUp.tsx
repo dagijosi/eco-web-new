@@ -10,7 +10,7 @@ import {
   FaCalendar,
 } from "react-icons/fa";
 
-const iconStyle = "text-gold/70";
+const iconStyle = "text-marigold-400";
 
 const commonData = [
   {
@@ -87,7 +87,7 @@ const SignUp = () => {
           className="order-1 md:order-2 w-1/2 md:w-2/5 object-cover"
         />
         <div className="flex flex-col justify-center items-center order-2 md:order-1 bg-white md:p-8 w-full md:w-1/2">
-          <h1 className="bg-clip-text bg-gradient-to-tr from-gold to-gold-light drop-shadow-lg mb-4 p-4 font-bold text-4xl text-center text-transparent tracking-wide">
+          <h1 className="bg-clip-text bg-gradient-to-tr from-marigold-600 to-marigold-400 drop-shadow-lg mb-4 p-4 font-bold text-4xl text-center text-transparent tracking-wide">
             Sign Up
           </h1>
           <Form

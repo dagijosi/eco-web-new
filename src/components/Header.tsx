@@ -20,13 +20,13 @@ const Header: React.FC = () => {
           {/* <img src={logoSrc} alt={title} className="mr-4 h-10 md:h-12" /> */}
           <a
             href="/"
-            className="bg-clip-text bg-gradient-to-r from-gold-light to-gold font-bold text-transparent text-xl"
+            className="bg-clip-text bg-gradient-to-r from-marigold-400 to-marigold-600 font-bold text-transparent text-xl"
           >
             {title}
           </a>
         </div>
         <button
-          className="md:hidden text-gold text-xl focus:outline-none"
+          className="md:hidden text-marigold-500 text-xl focus:outline-none"
           aria-label="Toggle Menu"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
@@ -59,13 +59,13 @@ const Header: React.FC = () => {
       >
         <a
           href={"/signup"}
-          className="border-gold-light hover:border-gold hover:bg-marigold-100 px-4 py-2 border rounded-md text-base text-marigold-600 hover:text-marigold-900 transition-colors duration-300"
+          className="border-marigold-400 hover:border-marigold-500 hover:bg-marigold-100 px-4 py-2 border rounded-md text-base text-marigold-600 hover:text-marigold-900 transition-colors duration-300"
         >
           Sign Up
         </a>
         <a
           href={"/login"}
-          className="bg-gradient-to-r from-gold-light hover:from-gold to-gold hover:to-gold-dark px-4 py-2 rounded-md font-bold text-white transform transition-transform duration-300 hover:scale-105"
+          className="bg-gradient-to-r from-marigold-400 hover:from-marigold-400 to-marigold-600 hover:to-marigold-700 px-4 py-2 rounded-md font-bold text-white transform transition-transform duration-300 hover:scale-105"
         >
           Login
         </a>

@@ -5,12 +5,18 @@ const CardList = () => (
     <Card
       imageSrc="/images/Card1.png"
       title="Sign up now and post your vehicle for rent"
+      href="/signup-post-vehicle"
     />
     <Card
       imageSrc="/images/Card2.png"
       title="Sign up now and Rent the vehicle of your choice"
+      href="/signup-rent-vehicle"
     />
-    <Card imageSrc="/images/Card1.png" title="Sign up for your Advertising" />
+    <Card
+      imageSrc="/images/Card1.png"
+      title="Sign up for your Advertising"
+      href="/signup-advertising"
+    />
   </div>
 );
 

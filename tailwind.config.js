@@ -6,11 +6,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        gold: {
-          DEFAULT: '#B88E2F',
-          light: '#D4AF37',
-          dark: '#8B6914',
-        },
         'marigold': {
         '50': '#faf8ec',
         '100': '#f3eece',
