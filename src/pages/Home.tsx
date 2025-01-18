@@ -21,6 +21,12 @@ const Home = () => {
         <div>
           <ProductList />
         </div>
+        <div className="p-8 text-left">
+          <h1 className="mb-6 font-semibold text-2xl text-marigold-600 underline underline-offset-8">
+            Popular
+          </h1>
+          <ProductList />
+        </div>
       </div>
     </FilterProvider>
   );
