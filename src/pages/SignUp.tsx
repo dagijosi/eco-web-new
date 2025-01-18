@@ -10,7 +10,7 @@ import {
   FaCalendar,
 } from "react-icons/fa";
 
-const iconStyle = "text-gold";
+const iconStyle = "text-gold/70";
 
 const commonData = [
   {

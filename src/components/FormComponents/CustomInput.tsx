@@ -23,7 +23,7 @@ const CustomInput: React.FC<dataProps> = ({
         <input
           type={type}
           placeholder={placeholder}
-          className="w-full focus:outline-none"
+          className="px-2 py-1 w-full focus:outline-none"
         />
       </div>
     </div>

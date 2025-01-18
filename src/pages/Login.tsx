@@ -2,7 +2,7 @@ import Form from "../components/Form";
 import { FaEnvelope, FaLock } from "react-icons/fa";
 
 const Login = () => {
-  const iconStyle = "text-gold";
+  const iconStyle = "text-gold/70";
 
   return (
     <div className="flex justify-center items-center p-4 min-h-[calc(100vh-100px)]">
