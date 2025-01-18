@@ -7,14 +7,14 @@ interface CardProps {
 }
 
 const Card = ({ imageSrc, title, href = "/signup" }: CardProps) => (
-  <div className="flex items-center gap-6 bg-gradient-to-tr from-marigold-100 to-marigold-300 shadow-md hover:shadow-lg p-4 rounded-md transition-shadow duration-300">
+  <div className="flex md:flex-row flex-col items-center gap-6 bg-gradient-to-tr from-marigold-100 to-marigold-300 shadow-md hover:shadow-lg p-4 rounded-md transition-shadow duration-300">
     <img
       src={imageSrc}
       alt={title.toLowerCase()}
-      className="rounded-md max-w-[15rem]"
+      className="mb-4 md:mb-0 rounded-md max-w-[15rem]"
       onError={(e) => (e.currentTarget.src = "/images/fallback.png")}
     />
-    <div className="flex flex-col">
+    <div className="flex flex-col text-center md:text-left">
       <h1 className="md:max-w-[8rem] font-semibold text-left text-marigold-700">
         {title}
       </h1>
