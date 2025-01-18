@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   FaCar,
   FaTruck,
@@ -9,6 +9,7 @@ import {
   FaShuttleVan,
   FaCarSide,
 } from "react-icons/fa";
+import { FilterContext } from "../../context/FilterContext";
 
 interface FilterItem {
   id: number;
@@ -59,7 +60,7 @@ const FilterCard: React.FC<FilterCardProps> = ({ id, title, icon, isActive, onCl
 };
 
 const Filter: React.FC = () => {
-  const [filter, setFilter] = useState(1);
+  const { filter, setFilter } = useContext(FilterContext);
 
   const handleFilter = (id: number) => {
     setFilter(id);

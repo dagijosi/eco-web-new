@@ -1,19 +1,28 @@
 import CardList from "../components/Home/CardList";
 import Filter from "../components/Home/Filter";
+import ProductList from "../components/Home/ProductList";
 import SearchBar from "../components/Home/SearchBar";
+import { FilterProvider } from "../context/FilterContext";
 
 const Home = () => {
   return (
-    <div className="mt-2 text-center">
-      <SearchBar />
-      <div className="flex justify-center items-center">
-        <CardList />
+    <FilterProvider>
+      <div className="mt-2 text-center">
+        <SearchBar />
+        <div className="flex justify-center items-center">
+          <CardList />
+        </div>
+        <div className="space-y-5 mt-8">
+          <h1 className="font-semibold text-2xl text-marigold-600 underline underline-offset-8">
+            Browse Our Selection of Cars
+          </h1>
+          <Filter />
+        </div>
+        <div>
+          <ProductList />
+        </div>
       </div>
-      <div className="space-y-5 mt-8">
-        <h1 className="font-semibold text-2xl text-marigold-600 underline underline-offset-8">Browse Our Selection of Cars</h1>
-        <Filter />
-      </div>
-    </div>
+    </FilterProvider>
   );
 };
 
