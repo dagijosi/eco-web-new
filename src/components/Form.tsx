@@ -9,9 +9,11 @@ type dataProps = {
 interface FormProps {
   data: dataProps[];
   type: "login" | "signup";
+  userType?: "renter" | "renti";
+  setUserType?: React.Dispatch<React.SetStateAction<"renter" | "renti">>;
 }
 
-const Form: React.FC<FormProps> = ({ data, type }) => {
+const Form: React.FC<FormProps> = ({ data, type, userType, setUserType }) => {
   const CustomInput: React.FC<dataProps> = ({ label, placeholder, type }) => {
     return (
       <div className="mb-4">
@@ -28,15 +30,44 @@ const Form: React.FC<FormProps> = ({ data, type }) => {
   };
 
   return (
-    <form className="w-full max-w-sm">
-      {data?.map((value, index) => (
-        <CustomInput
-          key={index}
-          label={value?.label}
-          placeholder={value?.placeholder}
-          type={value?.type}
-        />
-      ))}
+    <form className="w-full max-w-lg">
+      {type === "signup" && setUserType && (
+        <div className="mb-4 w-full">
+          <label className="block mb-2 font-bold text-gray-700 text-sm">
+            I am a:
+          </label>
+          <div className="flex space-x-0.5">
+            <button
+              type="button"
+              onClick={() => setUserType("renter")}
+              className={`px-4 py-2 rounded-lg focus:outline-none w-full ${
+                userType === "renter" ? "bg-blue-500 text-white" : "bg-gray-200 opacity-50"
+              }`}
+            >
+              Car Renter
+            </button>
+            <button
+              type="button"
+              onClick={() => setUserType("renti")}
+              className={`px-4 py-2 rounded-lg focus:outline-none w-full ${
+                userType === "renti" ? "bg-blue-500 text-white" : "bg-gray-200 opacity-50"
+              }`}
+            >
+              Car Renti
+            </button>
+          </div>
+        </div>
+      )}
+      <div className={`grid ${type === "signup" ? "grid-cols-2 gap-4" : "grid-cols-1 gap-4"}`}>
+        {data?.map((value, index) => (
+          <CustomInput
+            key={index}
+            label={value?.label}
+            placeholder={value?.placeholder}
+            type={value?.type}
+          />
+        ))}
+      </div>
       {type === "login" && (
         <div className="mb-4">
           <label className="block mb-2 font-bold text-gray-700 text-sm">
