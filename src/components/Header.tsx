@@ -59,7 +59,7 @@ const Header: React.FC = () => {
       >
         <a
           href={"/signup"}
-          className="border-gold-light hover:border-gold px-4 py-2 border rounded-md text-base hover:text-gold transition-colors duration-300"
+          className="border-gold-light hover:border-gold hover:bg-marigold-100 px-4 py-2 border rounded-md text-base text-marigold-600 hover:text-marigold-900 transition-colors duration-300"
         >
           Sign Up
         </a>
