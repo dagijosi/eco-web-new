@@ -9,8 +9,8 @@ type dataProps = {
 interface FormProps {
   data: dataProps[];
   type: "login" | "signup";
-  userType?: "renter" | "renti";
-  setUserType?: React.Dispatch<React.SetStateAction<"renter" | "renti">>;
+  userType?: "renter" | "lessor";
+  setUserType?: React.Dispatch<React.SetStateAction<"renter" | "lessor">>;
 }
 
 const Form: React.FC<FormProps> = ({ data, type, userType, setUserType }) => {
@@ -52,15 +52,15 @@ const Form: React.FC<FormProps> = ({ data, type, userType, setUserType }) => {
             </button>
             <button
               type="button"
-              aria-pressed={userType === "renti"}
-              onClick={() => setUserType("renti")}
+              aria-pressed={userType === "lessor"}
+              onClick={() => setUserType("lessor")}
               className={`px-5 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-light focus:ring-offset-2 w-full transition-colors duration-200 ${
-                userType === "renti"
+                userType === "lessor"
                   ? "bg-gold-light text-white shadow-md"
                   : "bg-gray-200 text-gray-700 hover:bg-gray-300"
               }`}
             >
-              Car Renti
+              Car Lessor
             </button>
           </div>
         </div>

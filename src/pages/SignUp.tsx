@@ -2,7 +2,7 @@ import { useState } from "react";
 import Form from "../components/Form";
 
 const SignUp = () => {
-  const [userType, setUserType] = useState<"renter" | "renti">("renter");
+  const [userType, setUserType] = useState<"renter" | "lessor">("renter");
 
   const commonData = [
     { label: "First Name", placeholder: "First Name", type: "text" },
@@ -17,7 +17,7 @@ const SignUp = () => {
     { label: "Phone Number", placeholder: "Phone Number", type: "tel" },
   ];
 
-  const rentiData = [
+  const lessorData = [
     { label: "Car Model", placeholder: "Car Model", type: "text" },
     { label: "Car Year", placeholder: "Car Year", type: "number" },
   ];
@@ -38,7 +38,7 @@ const SignUp = () => {
             type="signup"
             userType={userType}
             setUserType={setUserType}
-            data={commonData.concat(userType === "renter" ? renterData : rentiData)}
+            data={commonData.concat(userType === "renter" ? renterData : lessorData)}
           />
         </div>
       </div>
