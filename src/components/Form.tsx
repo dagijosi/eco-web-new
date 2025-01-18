@@ -33,24 +33,31 @@ const Form: React.FC<FormProps> = ({ data, type, userType, setUserType }) => {
     <form className="w-full max-w-lg">
       {type === "signup" && setUserType && (
         <div className="mb-4 w-full">
-          <label className="block mb-2 font-bold text-gray-700 text-sm">
-            I am a:
+          <label className="flex items-center mb-2 font-bold text-gray-700 text-sm">
+            <span className="mr-2">🚗</span> Choose your role:
           </label>
-          <div className="flex space-x-0.5">
+
+          <div className="flex space-x-2">
             <button
               type="button"
+              aria-pressed={userType === "renter"}
               onClick={() => setUserType("renter")}
-              className={`px-4 py-2 rounded-lg focus:outline-none w-full ${
-                userType === "renter" ? "bg-blue-500 text-white" : "bg-gray-200 opacity-50"
+              className={`px-5 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-light focus:ring-offset-2 w-full transition-colors duration-200 ${
+                userType === "renter"
+                  ? "bg-gold-light text-white shadow-md"
+                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
               }`}
             >
               Car Renter
             </button>
             <button
               type="button"
+              aria-pressed={userType === "renti"}
               onClick={() => setUserType("renti")}
-              className={`px-4 py-2 rounded-lg focus:outline-none w-full ${
-                userType === "renti" ? "bg-blue-500 text-white" : "bg-gray-200 opacity-50"
+              className={`px-5 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-light focus:ring-offset-2 w-full transition-colors duration-200 ${
+                userType === "renti"
+                  ? "bg-gold-light text-white shadow-md"
+                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
               }`}
             >
               Car Renti
@@ -58,7 +65,11 @@ const Form: React.FC<FormProps> = ({ data, type, userType, setUserType }) => {
           </div>
         </div>
       )}
-      <div className={`grid ${type === "signup" ? "grid-cols-2 gap-4" : "grid-cols-1 gap-4"}`}>
+      <div
+        className={`grid ${
+          type === "signup" ? "grid-cols-2 gap-4" : "grid-cols-1 gap-4"
+        }`}
+      >
         {data?.map((value, index) => (
           <CustomInput
             key={index}
@@ -84,7 +95,10 @@ const Form: React.FC<FormProps> = ({ data, type, userType, setUserType }) => {
       </button>
       {type === "login" && (
         <div className="mb-4">
-          <a href="/password" className="text-blue-500 text-sm hover:text-blue-800">
+          <a
+            href="/password"
+            className="text-blue-500 text-sm hover:text-blue-800"
+          >
             Forgot Password?
           </a>
         </div>

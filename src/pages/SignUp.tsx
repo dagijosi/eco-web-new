@@ -24,7 +24,7 @@ const SignUp = () => {
 
   return (
     <div className="flex justify-center items-center min-h-[calc(100vh-100px)]">
-      <div className="flex md:flex-row flex-col justify-center items-center md:gap-10 shadow-lg px-4 rounded-lg max-w-7xl overflow-hidden">
+      <div className="flex md:flex-row flex-col justify-center items-center md:gap-10 shadow-lg px-4 py-2 md:py-0 rounded-lg max-w-7xl overflow-hidden">
         <img
           src="/images/login.png"
           alt="logo"
