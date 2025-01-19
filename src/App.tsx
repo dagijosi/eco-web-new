@@ -3,6 +3,7 @@ import HideableLayout from "./common/HideableLayout";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import Detail from "./pages/Detail";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/product/:id" element={<Detail />} />
           </Routes>
         </HideableLayout>
       </Router>

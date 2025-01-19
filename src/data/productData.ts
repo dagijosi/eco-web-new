@@ -8,6 +8,10 @@ export const productData = [
     amount: "$20,000",
     categoryId: 2,
     isPopular: true,
+    type: "Car",
+    availableDate: "2023-01-15",
+    plateNo: "ABC123",
+    color: "Red"
   },
   {
     id: 2,
@@ -18,6 +22,10 @@ export const productData = [
     amount: "$30,000",
     categoryId: 3,
     isPopular: false,
+    type: "Car",
+    availableDate: "2023-02-15",
+    plateNo: "DEF456",
+    color: "Blue"
   },
   {
     id: 3,
@@ -28,6 +36,10 @@ export const productData = [
     amount: "$25,000",
     categoryId: 4,
     isPopular: true,
+    type: "Car",
+    availableDate: "2023-03-15",
+    plateNo: "GHI789",
+    color: "Black"
   },
   {
     id: 4,
@@ -38,6 +50,10 @@ export const productData = [
     amount: "$18,000",
     categoryId: 5,
     isPopular: false,
+    type: "Car",
+    availableDate: "2023-04-15",
+    plateNo: "JKL012",
+    color: "White"
   },
   {
     id: 5,
@@ -48,6 +64,10 @@ export const productData = [
     amount: "$35,000",
     categoryId: 6,
     isPopular: true,
+    type: "Car",
+    availableDate: "2023-05-15",
+    plateNo: "MNO345",
+    color: "Yellow"
   },
   {
     id: 6,
@@ -58,6 +78,10 @@ export const productData = [
     amount: "$28,000",
     categoryId: 7,
     isPopular: false,
+    type: "Car",
+    availableDate: "2023-06-15",
+    plateNo: "PQR678",
+    color: "Green"
   },
   {
     id: 7,
@@ -68,6 +92,10 @@ export const productData = [
     amount: "$32,000",
     categoryId: 8,
     isPopular: true,
+    type: "Car",
+    availableDate: "2023-07-15",
+    plateNo: "STU901",
+    color: "Orange"
   },
   {
     id: 8,
@@ -78,6 +106,10 @@ export const productData = [
     amount: "$18,000",
     categoryId: 5,
     isPopular: false,
+    type: "Car",
+    availableDate: "2023-08-15",
+    plateNo: "VWX234",
+    color: "Purple"
   },
   {
     id: 9,
@@ -88,6 +120,10 @@ export const productData = [
     amount: "$35,000",
     categoryId: 6,
     isPopular: true,
+    type: "Car",
+    availableDate: "2023-09-15",
+    plateNo: "YZA567",
+    color: "Pink"
   },
   {
     id: 10,
@@ -98,6 +134,10 @@ export const productData = [
     amount: "$28,000",
     categoryId: 7,
     isPopular: false,
+    type: "Car",
+    availableDate: "2023-10-15",
+    plateNo: "BCD890",
+    color: "Brown"
   },
   {
     id: 11,
@@ -108,6 +148,10 @@ export const productData = [
     amount: "$32,000",
     categoryId: 8,
     isPopular: true,
+    type: "Car",
+    availableDate: "2023-11-15",
+    plateNo: "EFG123",
+    color: "Gray"
   },
   {
     id: 12,
@@ -118,5 +162,9 @@ export const productData = [
     amount: "$18,000",
     categoryId: 5,
     isPopular: false,
+    type: "Car",
+    availableDate: "2023-12-15",
+    plateNo: "HIJ456",
+    color: "Silver"
   },
 ];

@@ -1,14 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { productData } from "../../data/productData";
-import { useContext } from "react";
-import { FilterContext } from "../../context/FilterContext";
-import { useNavigate } from "react-router-dom";
 
-const ProductList = () => {
-  const { filter } = useContext(FilterContext);
+const RelatedProductList = ({ relatedProducts }: { relatedProducts: any[] }) => {
   const navigate = useNavigate();
-
-  const filteredProducts = filter === 1 ? productData : productData.filter(product => product.categoryId === filter);
 
   const ProductCard = ({ product }: { product: any }) => {
     return (
@@ -41,7 +36,7 @@ const ProductList = () => {
               className="bg-marigold-500 hover:bg-marigold-600 px-4 py-2 rounded-md text-white text-xs transition-colors duration-300"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => navigate(`/product/${product.id}`)}
+              onClick={() => navigate(`/detail/${product.id}`)}
             >
               Details
             </motion.button>
@@ -54,7 +49,7 @@ const ProductList = () => {
   return (
     <div className="flex justify-center items-center">
       <div className="gap-4 grid grid-cols-2 md:grid-cols-6 p-2 md:p-6">
-        {filteredProducts.map((product) => (
+        {relatedProducts.map((product) => (
           <div key={product.id}>
             <ProductCard product={product} />
           </div>
@@ -64,4 +59,4 @@ const ProductList = () => {
   );
 };
 
-export default ProductList;
+export default RelatedProductList;
