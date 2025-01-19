@@ -7,6 +7,7 @@ export const productData = [
     date: "2023-01-01",
     amount: "$20,000",
     categoryId: 2,
+    isPopular: true,
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const productData = [
     date: "2023-02-01",
     amount: "$30,000",
     categoryId: 3,
+    isPopular: false,
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ export const productData = [
     date: "2023-03-01",
     amount: "$25,000",
     categoryId: 4,
+    isPopular: true,
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ export const productData = [
     date: "2023-04-01",
     amount: "$18,000",
     categoryId: 5,
+    isPopular: false,
   },
   {
     id: 5,
@@ -43,6 +47,7 @@ export const productData = [
     date: "2023-05-01",
     amount: "$35,000",
     categoryId: 6,
+    isPopular: true,
   },
   {
     id: 6,
@@ -52,6 +57,7 @@ export const productData = [
     date: "2023-06-01",
     amount: "$28,000",
     categoryId: 7,
+    isPopular: false,
   },
   {
     id: 7,
@@ -61,6 +67,7 @@ export const productData = [
     date: "2023-07-01",
     amount: "$32,000",
     categoryId: 8,
+    isPopular: true,
   },
   {
     id: 8,
@@ -70,6 +77,7 @@ export const productData = [
     date: "2023-08-01",
     amount: "$18,000",
     categoryId: 5,
+    isPopular: false,
   },
   {
     id: 9,
@@ -79,6 +87,7 @@ export const productData = [
     date: "2023-09-01",
     amount: "$35,000",
     categoryId: 6,
+    isPopular: true,
   },
   {
     id: 10,
@@ -88,6 +97,7 @@ export const productData = [
     date: "2023-10-01",
     amount: "$28,000",
     categoryId: 7,
+    isPopular: false,
   },
   {
     id: 11,
@@ -97,6 +107,7 @@ export const productData = [
     date: "2023-11-01",
     amount: "$32,000",
     categoryId: 8,
+    isPopular: true,
   },
   {
     id: 12,
@@ -106,5 +117,6 @@ export const productData = [
     date: "2023-12-01",
     amount: "$18,000",
     categoryId: 5,
+    isPopular: false,
   },
 ];

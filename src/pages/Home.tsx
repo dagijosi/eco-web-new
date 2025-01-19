@@ -1,6 +1,7 @@
 import CardList from "../components/Home/CardList";
 import Filter from "../components/Home/Filter";
 import ProductList from "../components/Home/ProductList";
+import PopularProductList from "../components/Home/PopularProductList";
 import SearchBar from "../components/Home/SearchBar";
 import { FilterProvider } from "../context/FilterContext";
 
@@ -21,11 +22,11 @@ const Home = () => {
         <div>
           <ProductList />
         </div>
-        <div className="p-8 text-left">
+        <div className="md:p-8 text-left">
           <h1 className="mb-6 font-semibold text-2xl text-marigold-600 underline underline-offset-8">
             Popular
           </h1>
-          <ProductList />
+          <PopularProductList />
         </div>
       </div>
     </FilterProvider>
